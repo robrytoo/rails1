@@ -6,7 +6,15 @@ ruby '3.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# added lines 10 and 12-15 per odin project
+group :development, :test do
+  gem 'sqlite3', '~> 1.4'
+end
+group :production do
+  gem 'pg'
+end
+
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
